@@ -2,19 +2,9 @@
 
 # Press ⌃R to execute it or replace it with your code.
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-import csv
-import io
 
-import numpy as np
 import pandas as pd
-from sklearn.preprocessing import LabelEncoder
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.datasets import make_regression
 from Helper import Model
-import os
-
-
-
 
 
 def print_hi(name):
@@ -24,8 +14,8 @@ def print_hi(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    df_train = pd.read_csv('train.csv', index_col= [0])
-    df_predict = pd.read_csv('test.csv', index_col=[0])
+    df_train = pd.read_csv('../File/train.csv', index_col= [0])
+    df_predict = pd.read_csv('../File/test.csv', index_col=[0])
 
     model = Model(df_train,df_predict)
     data = model.train_and_predict()
